@@ -1,0 +1,6 @@
+@OWASP_10_A10_server_side_request_forgery_HostAddress = http://localhost:5127
+
+GET {{OWASP_10_A10_server_side_request_forgery_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
