@@ -29,5 +29,15 @@ namespace OWASP_10_A10_server_side_request_forgery.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "GetExternalWeather")]
+        public async Task<IActionResult> GetExternalWeather(string proxyUrl)
+        {
+            var client = new HttpClient();
+
+            var response = await client.GetStringAsync(proxyUrl);
+
+            return Ok(response);
+        }
     }
 }
